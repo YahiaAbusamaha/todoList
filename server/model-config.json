@@ -1,0 +1,42 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ],
+    "mixins": [
+      "loopback/common/mixins",
+      "loopback/server/mixins",
+      "../common/mixins",
+      "./mixins"
+    ]
+  },
+  "User": {
+    "dataSource": "tododb"
+  },
+  "AccessToken": {
+    "dataSource": "tododb",
+    "public": false
+  },
+  "ACL": {
+    "dataSource": "tododb",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "tododb",
+    "public": false,
+    "options": {
+      "strictObjectIDCoercion": true
+    }
+  },
+  "Role": {
+    "dataSource": "tododb",
+    "public": false
+  },
+  "toDoList": {
+    "dataSource": "tododb",
+    "public": true
+  }
+}
